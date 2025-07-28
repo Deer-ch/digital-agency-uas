@@ -1,76 +1,52 @@
-# Proyek UAS: Website Agensi Digital "Spark Digital"
+# Spark Digital Agency
 
-Ini adalah proyek Ujian Akhir Semester (UAS) untuk mata kuliah Pengembangan Perangkat Lunak, yang berfokus pada pembuatan situs web multi-halaman yang interaktif menggunakan HTML5, CSS3, dan Vanilla JavaScript.
+Welcome to the official code repository for the Spark Digital agency website. This project serves as our digital showcase, designed to demonstrate our capabilities in creating modern, responsive, and interactive web experiences.
 
-## Deskripsi Proyek
+## About Spark Digital
 
-Spark Digital adalah sebuah situs web fiktif untuk agensi pemasaran digital. Situs ini dirancang untuk menjadi modern, responsif, dan kaya akan fitur interaktif sesuai dengan persyaratan yang diberikan dalam soal ujian. Tujuannya adalah untuk menunjukkan kemampuan dalam pengembangan front-end, termasuk manipulasi DOM, event handling, dan penggunaan API eksternal sederhana seperti Google Maps dan library JavaScript.
+Spark Digital is a results-driven digital marketing agency. Our mission is to help businesses, from startups to established enterprises, grow and shine in the digital world. We believe in the power of data, creativity, and technology to forge strategies that not only capture attention but also deliver measurable results.
 
-## Fitur Utama
+## Features
 
-### Halaman Utama (`index.html`)
+* **Multi-Page Structure:** A complete website with 5 distinct pages: Home, About, Services, Portfolio, and Contact.
+* **Interactive Animations:** Utilizes the Intersection Observer API for scroll-based animations on elements like the statistics counter and company timeline.
+* **Dynamic Filtering:** Both the Services and Portfolio pages feature dynamic, client-side filtering based on categories.
+* **Interactive Tools:** Includes a real-time price calculator and a contact form with live input validation.
+* **Third-Party Libraries:** Integrates Swiper.js for a smooth, auto-playing testimonials carousel and basicLightbox for a clean portfolio gallery.
+* **Fully Responsive:** Designed to provide an optimal viewing experience across a wide range of devices, from mobile phones to desktops.
 
-* **Hero Section Interaktif:**
-    * Latar belakang dengan efek *parallax scrolling*.
-    * Tagline dengan efek mengetik (*dynamic typing effect*) yang menampilkan beberapa kalimat secara bergantian.
-    * Counter statistik yang beranimasi dari 0 ke angka target saat terlihat di layar.
-* **Bagian Layanan:**
-    * Kartu layanan dengan efek *hover* yang halus (terangkat dan bayangan lebih jelas).
-    * Fitur *progressive disclosure* di mana detail tambahan muncul saat tombol "Learn More" diklik.
-* **Bagian Testimoni:**
-    * Carousel testimoni yang bergeser secara otomatis menggunakan library **Swiper.js**.
-    * Tampilan rating bintang untuk setiap testimoni.
+## Pages
 
-### Halaman Tentang Kami (`about.html`)
+| Page             | Description                                                 |
+| ---------------- | ----------------------------------------------------------- |
+| **`index.html`** | Homepage with hero section, services overview, and testimonials. |
+| **`about.html`** | Company story with an interactive timeline and team showcase.     |
+| **`services.html`**| Detailed service catalog with filtering and a price calculator. |
+| **`portfolio.html`**| Showcase of projects with a filterable grid and lightbox gallery. |
+| **`contact.html`** | Contact form with real-time validation, map, and FAQ section.   |
 
-* **Linimasa Perusahaan:**
-    * Tampilan linimasa vertikal yang interaktif.
-    * Setiap item di linimasa muncul dengan animasi saat di-scroll ke dalam viewport menggunakan **Intersection Observer API**.
-* **Bagian Tim:**
-    * Galeri anggota tim dalam format grid.
-    * Setiap kartu anggota tim memiliki *overlay* yang muncul saat di-hover, menampilkan ikon media sosial.
+## Design Pattern Used
 
-### Halaman Layanan (`services.html`)
+This project follows the **Modular Design Pattern** for its front-end structure to ensure scalability and maintainability.
 
-* **Katalog Layanan Dinamis:**
-    * Galeri layanan yang dapat difilter berdasarkan kategori (SEO, Social Media, Content).
-    * Tombol filter yang aktif akan memiliki gaya yang berbeda.
-* **Kalkulator Harga Interaktif:**
-    * Formulir sederhana yang memungkinkan pengguna memilih berbagai opsi layanan.
-    * Total estimasi biaya diperbarui secara *real-time* setiap kali pilihan diubah.
+* **Component Reuse:** Key components like the navigation bar are built once and reused across all pages, ensuring consistency and reducing code duplication.
+* **Separation of Concerns:** The project strictly separates its structure (HTML), styling (CSS), and behavior (JavaScript) into different files. This makes the codebase cleaner and easier to debug.
+* **Behavioral Patterns:**
+    * **Observer Pattern (Lightweight):** The Intersection Observer API is used to trigger animations (e.g., counters, timeline) only when elements become visible. This is a highly efficient implementation of the observer pattern that improves performance.
+    * **Module Pattern (Simplified):** The `main.js` file is structured to act as a simple router, conditionally loading specific modules (functions) based on the current page. This prevents scripts from one page from causing errors on another.
 
-### Halaman Portofolio (`portfolio.html`)
+## Tech Stack
 
-* **Galeri Portofolio Dinamis:**
-    * Galeri proyek yang dapat difilter berdasarkan jenis proyek (Web Design, Branding, Marketing).
-* **Lightbox:**
-    * Setiap gambar di portofolio dapat diklik untuk menampilkannya dalam ukuran penuh di tengah layar menggunakan library **basicLightbox**.
+* HTML5 (Semantic)
+* CSS3 (Flexbox, Grid, Animations)
+* Vanilla JavaScript (ES6+)
+* Swiper.js
+* basicLightbox
 
-### Halaman Kontak (`contact.html`)
+## Running the Project Locally
 
-* **Formulir Kontak Canggih:**
-    * Validasi input dilakukan secara *real-time* saat pengguna mengetik.
-    * Pesan error akan muncul di bawah setiap input jika tidak valid (misalnya, email tidak sesuai format, pesan terlalu pendek).
-* **Peta Interaktif:**
-    * Peta lokasi kantor yang disematkan dari **Google Maps**.
-* **FAQ Accordion:**
-    * Daftar pertanyaan yang sering diajukan.
-    * Jawaban akan muncul atau tersembunyi saat pertanyaan diklik, dengan ikon "+" yang berubah menjadi "-".
+To view this project on your machine:
+1.  Ensure you have all the files from this repository.
+2.  Open the `index.html` file in a modern web browser like Chrome or Firefox.
 
-## Teknologi yang Digunakan
-
-* **HTML5:** Digunakan untuk struktur dan konten semantik situs web.
-* **CSS3:** Digunakan untuk styling, layout (Flexbox & Grid), animasi, transisi, dan desain responsif.
-* **Vanilla JavaScript (ES6+):** Digunakan untuk semua logika dan interaktivitas, termasuk:
-    * Manipulasi DOM
-    * Event Handling (click, scroll, input)
-    * Intersection Observer API
-    * Penggunaan library eksternal (Swiper.js, basicLightbox)
-
-## Setup dan Instalasi
-
-1.  Clone repositori ini: `git clone https://github.com/Deer-ch/digital-agency-uas.git`
-2.  Navigasi ke direktori proyek.
-3.  Buka file `index.html` di browser pilihan Anda.
-
-Tidak ada dependensi atau proses build yang diperlukan.
+No installation or build process is required.
