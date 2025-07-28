@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Spark Digital</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Spark Digital</div>
+            <button class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="quote-btn">Get a Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="contact-form-section">
+        <h2>Contact Us</h2>
+        <p class="section-subtitle">Have a question or a project in mind? Drop us a line!</p>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+                <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="How can we help?"></textarea>
+                <span class="error-message"></span>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <section id="map-location">
+        <h2>Our Location</h2>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253282.0128211317!2d112.55831589311654!3d-7.275443784132187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbf8381ac47f%3A0x3027a76e352be40!2sSurabaya%2C%20Surabaya%20City%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1690493531469!5m2!1sen!2sid" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <button class="faq-question">What is your response time?</button>
+            <div class="faq-answer"><p>We usually respond within 24 hours on business days. For urgent matters, please contact us via phone.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Do you offer support on weekends?</button>
+            <div class="faq-answer"><p>Our standard support operates on weekdays. However, we offer premium support packages that include weekend and holiday coverage for critical issues.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">What services do you specialize in?</button>
+            <div class="faq-answer"><p>We specialize in a full suite of digital marketing services, including SEO, Social Media Management, Content Creation, and Web Development. Check out our Services page for more details.</p></div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
